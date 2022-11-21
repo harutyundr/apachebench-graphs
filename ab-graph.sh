@@ -103,7 +103,7 @@ if [ "${NUM_REQUESTS}" == "" ]; then
 fi
 
 # Run test
-AB_COMMAND="${AB_BIN} ${KEEPALIVE} -c ${CONCURRENCY} -n ${NUM_REQUESTS} -e ${CSV_RESULTS_FILE} -g ${PLOT_FILE} ${EXTRA_ARGS} ${URL}/ "
+AB_COMMAND="${AB_BIN} -l ${KEEPALIVE} -c ${CONCURRENCY} -n ${NUM_REQUESTS} -e ${CSV_RESULTS_FILE} -g ${PLOT_FILE} ${EXTRA_ARGS} ${URL}/ "
 echo -e "\n${AB_COMMAND}\n"
 
 out="$(${AB_COMMAND})"
